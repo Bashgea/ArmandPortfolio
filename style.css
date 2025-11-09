@@ -213,13 +213,34 @@ nav ul li a:hover::after{
 .services-list div{
     background: #1a1a1a;
     padding: 30px;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    transform-origin: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .services-list div:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 26px 52px rgba(0, 0, 0, 0.38);
+}
+
+.services-list div::before{
+    content: '';
+    position: absolute;
+    top: -120%;
+    left: -40%;
+    width: 220%;
+    height: 220%;
+    background: radial-gradient(circle at center, rgba(255, 77, 122, 0.18), transparent 62%);
+    transform: rotate(18deg);
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.services-list div:hover::before{
+    opacity: 1;
+    transform: rotate(0deg);
 }
 
 .services-list h2{
@@ -264,6 +285,20 @@ nav ul li a:hover::after{
     background: #ff004f;
     color: #080808;
     transform: translateY(-2px);
+}
+
+.services-list div::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 77, 122, 0.18);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.services-list div:hover::after{
+    opacity: 1;
 }
 
 .services-list{
