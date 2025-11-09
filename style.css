@@ -223,7 +223,7 @@ nav ul li a:hover::after{
 
 .services-list div > *{
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .services-list div:hover{
@@ -241,7 +241,7 @@ nav ul li a:hover::after{
     background: radial-gradient(circle at center, rgba(255, 77, 122, 0.18), transparent 62%);
     transform: rotate(18deg);
     opacity: 0;
-    z-index: 0;
+    z-index: 1;
     pointer-events: none;
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
@@ -302,7 +302,7 @@ nav ul li a:hover::after{
     border-radius: 16px;
     border: 1px solid rgba(255, 77, 122, 0.18);
     opacity: 0;
-    z-index: 0;
+    z-index: 1;
     pointer-events: none;
     transition: opacity 0.4s ease;
 }
