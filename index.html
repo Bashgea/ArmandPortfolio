@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portfolio of Armand Bashige, software engineer specializing in AI/ML and full-stack development.">
+        <title>Armand Bashige | Software Engineer</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class="logo" alt="Armand Bashige logo">
+                    <ul>
+                        <li><a href="#header">Home</a> </li>
+                        <li><a href="#about">About</a> </li>
+                        <li><a href="#projects">Projects</a> </li>
+                        <li><a href="#services">Services</a> </li>
+                        <li><a href="#contact">Contact</a> </li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Aspiring Software Engineer</p>
+                    <h1>Hi, I'm <span>Armand Bashige</span>,<br>CS student at Augsburg University</h1>
+                    <div class="cta-buttons">
+                        <a href="Resume.pdf" class="btn" target="_blank" rel="noopener">View Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------about---------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/user.png" alt="Portrait of Armand Bashige">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-tittle">About Me</h1>
+                        <p>
+                            I'm a passionate software engineer specializing in AI/ML and full-stack development. I enjoy building products that make data-driven decisions approachable while staying mindful of user experience.
+                            From algorithm design to scalable backend systems, I create solutions that solve real-world problems with measurable impact.
+                        </p>
+                        <p>
+                            My recent work includes shipping cloud-native microservices, optimizing inference pipelines, and leading frontend refreshes that improved accessibility scores. Outside of the classroom, I mentor first-time coders, contribute to open-source projects like <em>pandas_ta</em>, and collaborate with communities such as ColorStack and NSBE.
+                        </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Front-end</span><br>React, TypeScript, Tailwind CSS</li>
+                                <li><span>Back-end</span><br>Node.js, Python (FastAPI, Django), REST APIs</li>
+                                <li><span>Machine Learning</span><br>Model prototyping, MLOps pipelines, data visualization</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>AI Engineering</span><br>Deployed NLP models with monitoring dashboards for internal stakeholders</li>
+                                <li><span>Full-stack Projects</span><br>Built secure authentication flows and caching layers to improve performance</li>
+                                <li><span>Leadership</span><br>Mentored student developers and ran peer learning workshops</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Augsburg University</span><br>B.S. in Computer Science — Expected 2026</li>
+                                <li><span>Coursework</span><br>Advanced Algorithms, Applied Machine Learning, Software Engineering</li>
+                                <li><span>Activities</span><br>ColorStack, NSBE, AI Club</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-------projects---------->
+        <div id="projects">
+            <div class="container">
+                <h1 class="sub-title">Featured Projects</h1>
+                <div class="services-list">
+                    <div>
+                        <h2>RaffleManic</h2>
+                        <p>A blockchain-based raffle application that lets users create and join raffles securely using smart contracts. Built with Solidity, Polygon Mainnet, Chainlink VRF, and React to guarantee transparent winner selection.</p>
+                        <p class="project-role"><strong>My role:</strong> Implemented raffle creation logic, integrated Chainlink VRF for provably random winners, and led smart contract testing/debugging.</p>
+                        <p class="project-collab">Built with Cyril Foday and Cyril Tommy.</p>
+                        <a href="https://github.com/Nizzyboyz/Raffle_Final" target="_blank" rel="noopener">View GitHub</a>
+                        <a href="https://rafflemanic.com/" target="_blank" rel="noopener">Live Demo</a>
+                    </div>
+                    <div>
+                        <h2>Augsburg University Navigator</h2>
+                        <p>The School Navigator helps Augsburg students find walking routes between campus buildings by combining OpenRouteService and OpenStreetMap data. A Flask backend relays user start points and destinations to the ORS API and returns accurate directions.</p>
+                        <p class="project-role"><strong>My role:</strong> Designed the backend and database layer, created the SQLite schema for building coordinates, and built the <code>/navigate</code> endpoint that connects the Flask app with OpenRouteService.</p>
+                        <p class="project-collab">Built with Ayden Lee.</p>
+                        <a href="https://github.com/Aydenlee12/Augsburg-University-Navigator" target="_blank" rel="noopener">View GitHub</a>
+                        <a href="#" data-type="demo-link-aug-nav">Live Demo</a>
+                    </div>
+                    <div>
+                        <h2>Weather App</h2>
+                        <p>A mobile-friendly weather tracker that fetches current conditions and 5-day forecasts by city. The interface keeps everything simple for quick daily planning.</p>
+                        <p class="project-role"><strong>My role:</strong> Built the entire app using HTML, CSS, and vanilla JavaScript, including the API integration, search input, and responsive layout.</p>
+                        <a href="https://github.com/Bashgea/WeatherApp" target="_blank" rel="noopener">View GitHub</a>
+                        <a href="https://weatherapp-bee6e.web.app" target="_blank" rel="noopener">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-------services---------->
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <h2>Web Application</h2>
+                        <p>I design responsive web applications, from polished UI components to performant data flows that scale with your user base.</p>
+                        <a href="#contact">let's chat</a>
+                    </div>
+                    <div>
+                        <h2>Web Design</h2>
+                        <p>I translate brand stories into engaging digital experiences with accessible design systems and modern visuals.</p>
+                        <a href="#contact">let's chat</a>
+                    </div>
+                    <div>
+                        <h2>AI/ML Engineering</h2>
+                        <p>I prototype, deploy, and monitor machine learning models that deliver reliable insights and automate decisions.</p>
+                        <a href="#contact">let's chat</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-------contact---------->
+        <div id="contact">
+            <div class="container contact-wrapper">
+                <div class="contact-intro">
+                    <h1 class="sub-title">Let’s Connect & Collaborate</h1>
+                    <p>I love discussing new ideas, experimenting with emerging technologies, and collaborating on projects that make a difference.</p>
+                    <p>Whether it’s a coding challenge, a research concept, or just a conversation about AI, machine learning, or software development — I’m always excited to connect, learn, and grow with others who share the same passion for tech.</p>
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/armand-bashige/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+                        <a href="https://github.com/Bashgea" target="_blank" rel="noopener">View GitHub</a>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/mjkjbejl" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    <button type="submit">Send Message</button>
+                    <p class="form-note">Submissions go straight to your email via Formspree. Update the form if you rotate endpoints.</p>
+                </form>
+            </div>
+        </div>
+        <a href="#header" class="back-to-top" aria-label="Back to top">↑</a>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link")
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+        </script>
+
+    </body>
+</html>
