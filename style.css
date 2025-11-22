@@ -24,7 +24,7 @@ body{
     width: 100%;
     min-height: 100vh;
     display: flex;
-    padding: 30px 0 60px;
+    padding: 0;
     align-items: flex-start;
     background: linear-gradient(#08080855, #080808b5), url(images/background.jpg);
     background-size: cover;
@@ -40,7 +40,9 @@ body{
     display: flex;
     flex-direction: column;
     gap: 100px;
-    min-height: calc(100vh - 30px);
+    min-height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 60px;
 }
 
 nav{
@@ -48,6 +50,8 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
+    padding-top: 0;
 }
 
 .logo{
@@ -528,14 +532,16 @@ nav ul li a:hover::after{
     }
 
     #header{
-        align-items: center;
-        padding: 20px 0 40px;
+        align-items: flex-start;
+        padding: 0;
         min-height: 100vh;
     }
 
     #header .container{
         gap: 50px;
         min-height: auto;
+        padding-top: 20px;
+        padding-bottom: 40px;
     }
 
     nav{
