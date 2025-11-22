@@ -627,7 +627,7 @@ nav ul li a:hover::after{
     .header-text{
         text-align: center;
         font-size: 22px;
-        margin-top: 180px;
+        margin-top: 220px;
         padding: 0 10px;
         max-width: 100%;
         width: 100%;
@@ -818,7 +818,7 @@ nav ul li a:hover::after{
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 150px;
+        margin-top: 190px;
         display: flex;
         flex-direction: column;
         align-items: center;
