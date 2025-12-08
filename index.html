@@ -28,7 +28,19 @@
                 </nav>
                 <div class="header-text">
                     <p>Aspiring Software Engineer</p>
-                    <h1>Hi, I'm <span>Armand Bashige</span>,<br>CS student at Augsburg University</h1>
+                    <h1>
+                        Hi, I'm <span>Armand Bashige</span>,<br>
+                        <span class="role-text" id="roleRotator">Computer Science student at Augsburg University</span>
+                    </h1>
+                    <div class="hero-actions">
+                        <a class="btn btn-solid" href="#projects">View Projects</a>
+                        <a class="btn" href="Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+                    </div>
+                    <div class="hero-links">
+                        <a href="https://www.linkedin.com/in/armand-bashige/" target="_blank" rel="noopener">LinkedIn</a>
+                        <span>•</span>
+                        <a href="https://github.com/Bashgea" target="_blank" rel="noopener">GitHub</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -92,6 +104,12 @@
                 <div class="services-list">
                     <div>
                         <h2>RaffleManic</h2>
+                        <div class="project-thumb">
+                            <img src="images/raffle.png" alt="RaffleManic preview" loading="lazy">
+                        </div>
+                        <div class="badges">
+                            <span>Solidity</span><span>Chainlink VRF</span><span>React</span>
+                        </div>
                         <p>A blockchain-based raffle application that lets users create and join raffles securely using smart contracts. Built with Solidity, Polygon Mainnet, Chainlink VRF, and React to guarantee transparent winner selection.</p>
                         <p class="project-role"><strong>My role:</strong> Implemented raffle creation logic, integrated Chainlink VRF for provably random winners, and led smart contract testing/debugging.</p>
                         <p class="project-collab">Built with Cyril Foday and Cyril Tommy.</p>
@@ -100,6 +118,12 @@
                     </div>
                     <div>
                         <h2>Augsburg University Navigator</h2>
+                        <div class="project-thumb">
+                            <img src="images/navigator.png" alt="Augsburg University Navigator preview" loading="lazy">
+                        </div>
+                        <div class="badges">
+                            <span>Flask</span><span>OpenRouteService</span><span>SQLite</span>
+                        </div>
                         <p>The School Navigator helps Augsburg students find walking routes between campus buildings by combining OpenRouteService and OpenStreetMap data. A Flask backend relays user start points and destinations to the ORS API and returns accurate directions.</p>
                         <p class="project-role"><strong>My role:</strong> Designed the backend and database layer, created the SQLite schema for building coordinates, and built the <code>/navigate</code> endpoint that connects the Flask app with OpenRouteService.</p>
                         <p class="project-collab">Built with Ayden Lee.</p>
@@ -108,6 +132,12 @@
                     </div>
                     <div>
                         <h2>Weather App</h2>
+                        <div class="project-thumb">
+                            <img src="images/weather.png" alt="Weather App preview" loading="lazy">
+                        </div>
+                        <div class="badges">
+                            <span>HTML</span><span>CSS</span><span>Vanilla JS</span>
+                        </div>
                         <p>A mobile-friendly weather tracker that fetches current conditions and 5-day forecasts by city. The interface keeps everything simple for quick daily planning.</p>
                         <p class="project-role"><strong>My role:</strong> Built the entire app using HTML, CSS, and vanilla JavaScript, including the API integration, search input, and responsive layout.</p>
                         <a href="https://github.com/Bashgea/WeatherApp" target="_blank" rel="noopener">View GitHub</a>
@@ -197,6 +227,53 @@
                     });
                 });
             }
+
+            // Typewriter-style role rotator
+            (function(){
+                const roles = [
+                    'Computer Science student at Augsburg University',
+                    'Data Science at Augsburg University',
+                    'Mathematics Minor at Augsburg University'
+                ];
+                const roleEl = document.getElementById('roleRotator');
+                if(!roleEl) return;
+
+                let roleIndex = 0;
+                let charIndex = 0;
+                let typing = true;
+
+                function tick(){
+                    const current = roles[roleIndex];
+
+                    if(typing){
+                        // Type forward
+                        if(charIndex <= current.length){
+                            roleEl.textContent = current.slice(0, charIndex);
+                            charIndex++;
+                            setTimeout(tick, 40);
+                            return;
+                        }
+                        typing = false;
+                        setTimeout(tick, 2000); // pause at full text
+                        return;
+                    }
+
+                    // Deleting state
+                    if(charIndex >= 0){
+                        roleEl.textContent = current.slice(0, charIndex);
+                        charIndex--;
+                        setTimeout(tick, 25);
+                        return;
+                    }
+
+                    // Move to next phrase
+                    typing = true;
+                    roleIndex = (roleIndex + 1) % roles.length;
+                    setTimeout(tick, 100);
+                }
+
+                tick();
+            })();
         </script>
 
     </body>
